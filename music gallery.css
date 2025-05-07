@@ -1,0 +1,114 @@
+
+/* This is for easier layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html 
+  {
+    height: 100%;
+    font-family: Georgia, Serif;
+    background-color: #d1e0e0; 
+  }
+
+  .top-nav 
+  {
+    background: #f1f2d5; 
+    display: flex; /* For layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; 
+    height: 100px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .totoro-logo img 
+  {
+    height: 120px; 
+    width: auto; /*Keep size the same */
+  }
+
+  .nav-menu 
+  {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+  }
+
+  .nav-menu li a 
+  {
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.4; 
+    padding: 12px 18px; 
+    border-radius: 5px;
+  }
+
+  .nav-menu li a:hover 
+  {
+    color: #6a9a88; /* Change color when hovering */
+    background-color: rgba(106, 154, 136, 0.2);  /* Light background when hovering */
+  }
+
+.music-container
+{
+    display: flex; 
+    align-items: center;
+    flex-flow: column; /* Stack items vertically */
+    margin-top: 80px; 
+}
+
+.music-container .box 
+{
+    height: 256px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background: #f9f6f6;
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 32px;
+}
+
+.music-container .box .image
+{
+    height:100%;
+    width:25%;  
+}
+
+.music-container .box .image img
+{
+    height:100%;
+    width:100%; 
+    object-fit: cover; /* Crop image nicely */
+}
+
+.music-container .box .music
+{
+    width: 75%; /* Width of music controls */
+}
+
+.music-container .box .music audio
+{
+    width: 100%; /* width of audio player */
+    outline: none;
+}
+
+.music-container .box .music audio::-webkit-media-controls-enclosure
+{
+    background: none;
+
+}
+
+
+
+
+
+
+
+
