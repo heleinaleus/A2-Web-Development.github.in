@@ -1,0 +1,164 @@
+
+/* This is for easier layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Font and height settings for whole page */
+  body, html 
+  {
+    height: 100%;
+    font-family: Georgia, Serif;
+  }
+
+  .totoro-banner 
+  {
+    background-image: url('home banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 125%;
+    display: flex; /* For layout */
+    flex-direction: column;
+    position: relative; /* For positioning the title inside the banner */
+    color: white;
+  }
+
+  .top-nav 
+  {
+    background: #f1f2d5; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; 
+    height: 100px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .totoro-logo img 
+  {
+    height: 120px; 
+    width: auto; /*Keep size the same */
+  }
+
+  .nav-menu 
+  {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+  }
+
+  .nav-menu li a 
+  {
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.4; 
+    padding: 12px 18px; 
+    border-radius: 5px;
+  }
+
+  .nav-menu li a:hover 
+  {
+    color: #6a9a88; /* Change color when hovering */
+    background-color: rgba(106, 154, 136, 0.2); /* Light background when hovering */
+  }
+
+  .totoro-title 
+  {
+    position: absolute; /* Positioned over banner */
+    bottom: 10px;
+    left: 40px;
+    width: 500px; 
+    height: auto;            
+  }
+
+  .info-section
+   {
+    background-color: #d1e0e0;
+    display: flex;
+    align-items: center;
+    padding: 100px 200px;
+    gap: 20px;
+  }
+
+  .info-section img 
+  {
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover; /* To crop image nicely */
+  }
+
+  .info-description 
+  {
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+    color: #333;
+  }
+
+  .info-description h2 
+  { 
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+
+  .info-description p 
+  {
+    margin: 0;
+    max-width: 90%;
+  }
+
+  /* Media query for devices with a max width of 768px */
+  @media (max-width: 768px) 
+  {
+
+    .totoro-banner 
+    {
+        height: auto; 
+        padding: 20px; 
+    }
+    .totoro-title 
+    {
+        width: 100%; 
+        left: 10px; 
+        bottom: 10px;
+    }
+    .info-section 
+    {
+        flex-direction: column; 
+        padding: 50px 20px; 
+    }
+    .info-section img 
+    {
+        max-width: 100%; 
+        height: auto;
+    }
+    .info-description 
+    {
+        padding: 20px; 
+    }
+
+    .info-description h2 
+    {
+      font-size: 30px; 
+  }
+  .info-description p 
+  {
+      font-size: 16px; 
+  }
+  .nav-menu 
+  {
+      flex-direction: column; 
+      gap: 10px; 
+  }
+  .nav-menu li a 
+  {
+      font-size: 18px; 
+      padding: 10px; 
+  }
+}
+ 

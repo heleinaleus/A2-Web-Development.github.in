@@ -1,0 +1,196 @@
+
+/* This is for easier layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html 
+  {
+    height: 100%;
+    font-family: Georgia, Serif;
+    background-color: #d1e0e0; 
+
+  }
+
+  .top-nav 
+  {
+    background: #f1f2d5; 
+    display: flex; /* For layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; 
+    height: 100px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .totoro-logo img 
+  {
+    height: 120px; 
+    width: auto; /*Keep size the same */
+  }
+
+  .nav-menu 
+  {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+  }
+
+  .nav-menu li a 
+  {
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.4; 
+    padding: 12px 18px; 
+    border-radius: 5px;
+  }
+
+  .nav-menu li a:hover 
+  {
+    color: #6a9a88; /* Change color when hovering */
+    background-color: rgba(106, 154, 136, 0.2); /* Light background when hovering */
+  }
+
+  .main-content 
+  {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; 
+    align-items: center; 
+    min-height: calc(100vh - 100px); /* Accounting for navigation */
+    padding: 20px; 
+    margin: 10px;
+
+}
+
+  .container 
+  {
+    background: #f9f6f6;
+    padding: 60px 40px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    box-sizing: border-box; /* Include padding and border in width/height */
+  }
+  label 
+  {
+    display: block; /* This is to block the display for labels */
+    margin-bottom: 6px;
+    text-align: left;
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+
+  input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    button 
+    {
+        width: 100%;
+        padding: 12px;
+        background-color: #6a9a88;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      button:hover 
+      {
+        background-color: #577e6a;
+      }
+
+      #thank-you 
+      {
+        display: none; /* Hide the thank you by default */
+        justify-content: center;
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.4;
+        max-width: 90%;
+        margin: 0 20px;
+        animation: text 4s infinite; /* Apply animation to the named 'text' */
+      }
+      
+      /* For the text color animation */
+      @keyframes text { from { 
+        color: blueviolet; /* Start color */
+        }
+        
+        
+        to {
+        color: pink; /* End color */
+        }
+        }
+     
+      #thank-you img 
+      {
+    display: block;
+    margin: 25px auto 0;
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 0; 
+    box-shadow: none; 
+}
+
+
+/* Media query for devices with a max width of 768px */
+@media (max-width: 768px) 
+{
+  .top-nav 
+  {
+      flex-direction: column; 
+      padding: 10px; 
+  }
+  .nav-menu 
+  {
+      flex-direction: column; 
+      gap: 10px; 
+  }
+  .nav-menu li a 
+  {
+      font-size: 18px; 
+      padding: 10px; 
+  }
+  .main-content 
+  {
+      padding: 10px; 
+  }
+  .container 
+  {
+      padding: 40px 20px; 
+      max-width: 90%; 
+  }
+
+  button 
+  {
+    font-size: 14px; 
+}
+#thank-you 
+{
+    font-size: 24px; 
+}
+#thank-you img 
+{
+    width: 100%; 
+    height: auto; 
+}
+}
